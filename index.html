@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang='en' class=''>
+<head>
+  <title>DC423 and BSides Chattanooga</title>
+  <meta charset='UTF-8'><meta name="robots" content="noindex">
+
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<style class="cp-pen-styles">* {
+    box-sizing: border-box;
+  }
+
+  html.open, body.open {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html {
+    padding: 40px;
+    font-size: 62.5%;
+  }
+
+  body {
+    padding: 20px;
+    background-color: #5BB9B8;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+  }
+
+  p {
+    text-align: center;
+    margin: 20px 0 60px;
+  }
+
+  main {
+    background-color: #2C3845;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 300;
+  }
+
+  table {
+    display: block;
+  }
+
+  tr, td, tbody, tfoot {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    padding-bottom: 10px;
+  }
+
+  td {
+    padding: 10px 10px 0;
+    text-align: center;
+  }
+  td:before {
+    content: attr(data-title);
+    color: #7a91aa;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding-right: 10px;
+    display: block;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 700;
+  }
+
+  thead th {
+    background-color: #202932;
+    color: #fff;
+    border: 1px solid #202932;
+  }
+
+  tfoot th {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #b8c4d2;
+  }
+
+  .button {
+    line-height: 1;
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 8px;
+    background-color: #4b908f;
+  }
+
+  .select {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #28333f;
+  }
+  .select:before {
+    display: none;
+  }
+
+  .detail {
+    background-color: #BD2A4E;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+  .detail.open {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .detail-container {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 500px;
+  }
+
+  dl {
+    margin: 0;
+    padding: 0;
+  }
+
+  dt {
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+
+  dd {
+    margin: 0 0 40px 0;
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ac2647;
+    box-shadow: 0 1px 0 #c52c51;
+  }
+
+  .close {
+    background: none;
+    padding: 18px;
+    color: #fff;
+    font-weight: 300;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    line-height: 1;
+    font-size: 1.8rem;
+    position: fixed;
+    right: 40px;
+    top: 20px;
+    -moz-transition: border 0.3s linear;
+    -o-transition: border 0.3s linear;
+    -webkit-transition: border 0.3s linear;
+    transition: border 0.3s linear;
+  }
+  .close:hover, .close:focus {
+    background-color: #a82545;
+    border: 1px solid #a82545;
+  }
+
+  a:link{
+    color: #5BB9B8;
+  }
+  a:visited{
+    color: #5BB9B8;
+  }
+  a:hover {
+      color: #5BB9B8;
+  }
+  a:active {
+      color: #5BB9B8;
+  }
+
+  /* unvisited link */
+  #footer-link:link {
+      color: green;
+  }
+
+  /* visited link */
+  #footer-link:visited {
+      color: green;
+  }
+
+  /* mouse over link */
+  #footer-link:hover {
+      color: green;
+  }
+
+  /* selected link */
+  #footer-link:active {
+      color: green;
+  }
+  #profiles *{
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /*#profiles h1{
+    padding-left: 5px;
+  }
+  #profiles div{
+    padding-left: 5px;
+  }*/
+  #profiles ul {
+    list-style-type: none;
+  }
+  #profiles hr {
+      height: 10px;
+      background-color: #5BB9B8;
+      border: none;
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+
+  @media (min-width: 460px) {
+    td {
+      text-align: left;
+    }
+    td:before {
+      display: inline-block;
+      text-align: right;
+    }
+    table {
+      display: table;
+    }
+    tr {
+      display: table-row;
+    }
+    tbody {
+      display: table-row-group;
+    }
+    tfoot {
+      display: table-footer-group;
+    }
+    td {
+      border: 1px solid #28333f;
+    }
+    td:before {
+      display: none;
+    }
+    td, th {
+      padding: 10px;
+    }
+    td:first-child {
+      background-color: #242e39;
+    }
+    tfoot th {
+      display: table-cell;
+    }
+    .area {
+      display: inline;
+    }
+
+  }
+  @media (min-width: 720px) {
+    table {
+      display: table;
+    }
+    tr {
+      display: table-row;
+    }
+    td, th {
+      display: table-cell;
+    }
+    tbody {
+      display: table-row-group;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tfoot {
+      display: table-footer-group;
+    }
+    td {
+      border: 1px solid #28333f;
+    }
+    td:before {
+      display: none;
+    }
+    td, th {
+      padding: 10px;
+    }
+    tr:nth-child(2n+2) td {
+      background-color: #242e39;
+    }
+    tfoot th {
+      display: table-cell;
+    }
+    .area {
+      display: none;
+    }
+  }
+</style></head><body>
+<h1>
+  BSidesCHA 2018 Agenda
+</h1>
+
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Area 1</th>
+        <th>Area 2</th>
+        <th>Area 3</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th colspan='3'>
+          Agenda redesigned by <a id="footer-link" href="http://www.dc423.org/">DC423</a>
+        </th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>9:00 AM</td>
+        <td><span class="area">Area 1 - </span>Lightning Talks</td>
+        <td><span class="area">Area 2 - </span>Lightning Talks</td>
+        <td><span class="area">Area 3 - </span>Physical Security</td>
+      </tr>
+      <tr>
+        <td>9:30 AM</td>
+        <td><span class="area">Area 1 - </span>Opening </td>
+        <td><span class="area">Area 2 - </span>Opening</td>
+        <td><span class="area">Area 3 - </span>Opening </td>
+      </tr>
+      <tr>
+        <td>10:00 AM</td>
+        <td><span class="area">Area 1 - </span><a href="https://i.imgur.com/iP7fByl.gif">Red vs Blue and why We are <br>doing it wrong</a></td>
+        <td><span class="area">Area 2 - </span><a href="#Andrew">The Semi-Comprehensive Guide to<br>Setting up a Home Lab</a></td>
+        <td><span class="area">Area 3 - </span>Physical Security </td>
+      </tr>
+      <tr>
+        <td>11:00 AM</td>
+        <td><span class="area">Area 1 - </span><a href="#Brian">Lessons learned from a OWASP<br>Top 10 Datacell</a></td>
+        <td><span class="area">Area 2 - </span><a href="#Kyle">Blue-Teamin' on a Budget [of Zero]</a></td>
+        <td><span class="area">Area 3 - </span>Physical Security</td>
+      </tr>
+      <tr>
+        <td>12:00 (Noon)</td>
+        <td><span class="area">Area 1 - </span>Lunch/Announcements</td>
+        <td><span class="area">Area 2 - </span>Lightning Talks</td>
+        <td><span class="area">Area 3 - </span>Physical Security </td>
+      </tr>
+      <tr>
+        <td>1:00 PM</td>
+        <td><span class="area">Area 1 - </span><a href="#Todd">Attacker Vs. Defender:<br>Observations on the Human<br>Side of Security </a></td>
+        <td><span class="area">Area 2 - </span><a href="#Aaron">IoT and the Bot Wars to Com</a></td>
+        <td><span class="area">Area 3 - </span>Physical Security</td>
+      </tr>
+      <tr>
+        <td>2:00 PM </td>
+        <td><span class="area">Area 1 - </span><a href="#Eric">The Gilligan Phenomenon: <br>Fixing The Holes In the Ransomware and Phishing<br>Boats</a></td>
+        <td><span class="area">Area 2 - </span><a href="#Shayne">Machine Learning and Cyber Security: <br>How Smart is Can it Be?</a></td>
+        <td><span class="area">Area 3 - </span>Physical Security</td>
+      </tr>
+      <tr>
+        <td>3:00 PM </td>
+        <td><span class="area">Area 1 - </span>Closing</td>
+        <td><span class="area">Area 2 - </span>Closing</td>
+        <td><span class="area">Area 3 - </span>Closing</td>
+      </tr>
+    </tbody>
+  </table>
+
+  </main>
+
+
+  </br>
+  </br>
+  </br>
+
+
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+   </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br></br>
+  </br>
+
+  <main id="profiles">
+
+
+  <div id="Eric">
+    <h1>Eric Kron (<a href="https://twitter.com/erichkron" target="_blank" rel="noopener">@ErichKron</a>)</h1>
+  <p><em>The Gilligan Phenomenon: Fixing The Holes In the Ransomware And Phishing Boats</em></p>
+  <p><img data-attachment-id="172" data-permalink="https://www.bsidescha.com/schedule/erich/" data-orig-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/erich.jpg?fit=574%2C530&amp;ssl=1" data-orig-size="574,530" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;Robert La Follette&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;(C)2014 Robert La Follette&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Erich Kron" data-image-description="" data-medium-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/erich.jpg?fit=300%2C277&amp;ssl=1" data-large-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/erich.jpg?fit=574%2C530&amp;ssl=1" class="alignnone wp-image-172" src="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/erich.jpg?resize=108%2C100" alt="" width="108" height="100" srcset="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/erich.jpg?resize=300%2C277&amp;ssl=1 300w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/erich.jpg?w=574&amp;ssl=1 574w" sizes="(max-width: 108px) 100vw, 108px" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;">Phishing attacks continue to batter businesses and individuals ruthlessly. Ransomware has reached epidemic proportions and organizations have lost billions of dollars to CEO Fraud and W2 scams. It seems every technology vendor has a &#8220;cure&#8221; for these attacks however they continue to be successful time and time again.</span></p>
+  <p><span style="font-size: 10pt;">In this session we will take a look at the problem from a humorous and different angle based on the antics in the famous television show, Gilligan&#8217;s Island. We will discuss how we are so busy working hard to make radios out of coconuts that we have ignored the idea of fixing the hole in the boat that has us stuck on the island in the first place.</span></p>
+  <p><span style="font-size: 10pt;">This session will discuss: </span></p>
+  <ul>
+  <li><span style="font-size: 10pt;">Current phishing trends and scams </span></li>
+  <li><span style="font-size: 10pt;">Ransomware attacks and defense </span></li>
+  <li><span style="font-size: 10pt;">Why technical mitigations fail to solve the issue </span></li>
+  <li><span style="font-size: 10pt;">Why your end-users are the &#8220;holes&#8221; in the boat that need fixing</span></li>
+  </ul>
+  </div>
+  <p>&nbsp;</p>
+  <hr>
+
+  <div id="Shayne">
+    <h1>Shayne Champion</h1>
+  <p><i>Machine Learning and Cyber Security: How Smart is Can it Be?</i></p>
+  <p><img data-attachment-id="171" data-permalink="https://www.bsidescha.com/schedule/shayne_champion/" data-orig-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/Shayne_Champion-e1507029997307.jpg?fit=100%2C133&amp;ssl=1" data-orig-size="100,133" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;13&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS 5D Mark II&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1490091780&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;105&quot;,&quot;iso&quot;:&quot;160&quot;,&quot;shutter_speed&quot;:&quot;0.01&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Shayne Champion" data-image-description="" data-medium-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/Shayne_Champion-e1507029997307.jpg?fit=225%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/Shayne_Champion-e1507029997307.jpg?fit=768%2C1024&amp;ssl=1" class="alignnone wp-image-171" src="https://i2.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/Shayne_Champion.jpg?resize=100%2C133" alt="" width="100" height="133" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;">Machine Learning, artificial intelligence, and neural networks are becoming all the rage for vendors pitching the newest security products.  However, how smart can a computer really be?  This discussion will cover some of the key concepts in machine learning while describing how it works in layman&#8217;s terms.  Then we will look at the biases and issues inherent to machine learning, where it works, where it is problematic, and how this may or may not help us in practical SecOps.</span></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr>
+
+  <div id="Andrew">
+    <h1>Andrew Williams (<a href="https://twitter.com/andrewdwilliams" target="_blank" rel="noopener">@AndrewDWilliams</a>)</h1>
+  <p><em>The Semi-Comprehensive Guide to Setting Up a Home Lab</em></p>
+  <p><img data-attachment-id="175" data-permalink="https://www.bsidescha.com/schedule/andrewdwilliams/" data-orig-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?fit=400%2C400&amp;ssl=1" data-orig-size="400,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Andrew Williams" data-image-description="" data-medium-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?fit=300%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?fit=400%2C400&amp;ssl=1" class="alignnone wp-image-175" src="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?resize=100%2C100" alt="" width="100" height="100" srcset="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?resize=90%2C90&amp;ssl=1 90w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?resize=50%2C50&amp;ssl=1 50w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/andrewdwilliams.jpg?w=400&amp;ssl=1 400w" sizes="(max-width: 100px) 100vw, 100px" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;"> How to setup a home lab for beginners getting started in infosec all the way up to moderate level practitioners. </span></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr>
+
+  <div id="Todd">
+    <h1>Todd O&#8217;Boyle (<a href="https://twitter.com/oboyle" target="_blank" rel="noopener">@oboyle</a>)</h1>
+  <p><em>Attacker vs. Defender: Observations on the Human Side of Security</em></p>
+  <p><img data-attachment-id="174" data-permalink="https://www.bsidescha.com/schedule/toddoboyle/" data-orig-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?fit=400%2C400&amp;ssl=1" data-orig-size="400,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Todd O&#8217;Boyle" data-image-description="" data-medium-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?fit=300%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?fit=400%2C400&amp;ssl=1" class="alignnone wp-image-174" src="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?resize=100%2C100" alt="" width="100" height="100" srcset="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?resize=90%2C90&amp;ssl=1 90w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?resize=50%2C50&amp;ssl=1 50w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/toddoboyle.jpeg?w=400&amp;ssl=1 400w" sizes="(max-width: 100px) 100vw, 100px" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;">Cyberattackers spend about a hundredth of the time and money that defenders do giving them a huge advantage when it comes to carrying out their nefarious deeds. Cyberattacks favor the attacker, so what&#8217;s a defender to do?</span><br />
+  <span style="font-size: 10pt;">This talk will explore research completed for the U.S. Department of Defense that delves into why simply blocking a cyberattack with technology almost never favors the defender. We&#8217;ll begin with detailed stories of the asymmetry in time and money spent by the attacker and the defender, and offer practical approaches to engaging attackers once you find them. We&#8217;ll also study the &#8220;Cyber Kill Chain&#8221; to identify weaknesses in attacker tactics and then explore some practical ways to use those dependencies against them. We will wrap up with a shared brainstorming session to improve how everyone in the audience can respond when under attack.</span><br />
+  <span style="font-size: 10pt;">Attendees will learn:</span></p>
+  <ul>
+  <li><span style="font-size: 10pt;">Why spending more time and money on simply blocking attackers wont&#8217; help you catch up with them</span></li>
+  <li><span style="font-size: 10pt;">Real-world exploits and defense countermeasures</span></li>
+  <li><span style="font-size: 10pt;">Six steps to better understand how an attacker works</span></li>
+  <li><span style="font-size: 10pt;">How to identify weaknesses in an attacker&#8217;s tactics</span></li>
+  <li><span style="font-size: 10pt;">Ideas that help even the defensive playing field and make cybersecurity more symmetric</span></li>
+  </ul>
+  </div>
+  <p>&nbsp;</p>
+  <hr>
+
+  <div id="Kyle">
+    <h1>Kyle Bubp (<a href="https://twitter.com/kylebubp" target="_blank" rel="noopener">@kylebubp</a>)</h1>
+  <p><em>Blue-Teamin&#8217; on a Budget [of Zero]</em></p>
+  <p><img data-attachment-id="178" data-permalink="https://www.bsidescha.com/schedule/kylebubp/" data-orig-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?fit=400%2C400&amp;ssl=1" data-orig-size="400,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Kyle Bubp" data-image-description="" data-medium-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?fit=300%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?fit=400%2C400&amp;ssl=1" class="alignnone wp-image-178" src="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?resize=100%2C100" alt="" width="100" height="100" srcset="https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?resize=150%2C150&amp;ssl=1 150w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?resize=300%2C300&amp;ssl=1 300w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?resize=90%2C90&amp;ssl=1 90w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?resize=50%2C50&amp;ssl=1 50w, https://i1.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/kylebubp.jpg?w=400&amp;ssl=1 400w" sizes="(max-width: 100px) 100vw, 100px" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;">Even though large breaches have hit headline news in years past, some companies are still on the fence about investing in cybersecurity. As a security practitioner (or jack of all trades) how can you be expected to cover your assets with zero budget? Thankfully, there are plenty of open-source tools out there that will allow you to secure your organization. </span></p>
+  <p><span style="font-size: 10pt;">Come join me as I discuss how you can track your network assets, perform vulnerability assessments, prevent attacks with intrusion prevention systems, and even deploy HIDS. We will also jump into finding sensitive data and PII in your network, as well as incident response tools and automation. All it costs is your time (and maybe a VM or two). You really can drastically improve the security posture of your network with little to no budget, and you&#8217;ll have fun doing it! OK, maybe it won&#8217;t be fun, but at least you&#8217;ll learn something, right?</span></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr>
+
+  <div id="Brian">
+    <h1>Brian Glas (<a href="https://twitter.com/infosecdad" target="_blank" rel="noopener">@InfosecDad</a>)</h1></p>
+  <p><em>Lessons learned from a OWASP Top 10 Datacall</em></p>
+  <p><img data-attachment-id="179" data-permalink="https://www.bsidescha.com/schedule/brianglas/" data-orig-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?fit=400%2C400&amp;ssl=1" data-orig-size="400,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Brian Glas" data-image-description="" data-medium-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?fit=300%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?fit=400%2C400&amp;ssl=1" class="alignnone wp-image-179" src="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?resize=100%2C100" alt="" width="100" height="100" srcset="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?resize=90%2C90&amp;ssl=1 90w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?resize=50%2C50&amp;ssl=1 50w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/brianglas.jpg?w=400&amp;ssl=1 400w" sizes="(max-width: 100px) 100vw, 100px" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;">The goal of the OWASP Top 10 project is to raise awareness and create a baseline for application security by identifying some of the most critical risks facing organizations. The Top 10 project is referenced by many standards, books, tools, and organizations, including MITRE, PCI DSS, DISA, FTC, and many more. To shape the OWASP Top 10 2017, the project ran a public call for data and industry survey to help define what should be included in the list.</span></p>
+  <p><span style="font-size: 10pt;">Gain insight into some of the details of the OWASP Top 10 Call for Data and industry survey, and what we were attempting to learn. Hear about was learned from collecting and analyzing widely varying industry data and attempts to build a dataset for comparison and analysis. This talk will discuss tips and common pitfalls for structuring vulnerability data and the subsequent analysis. Learn what the data can tell us and what questions are still left unanswered. Uncover some of the differences in collecting metrics in different stages of the software lifecycle and recommendations for handling them.</span></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr>
+
+  <div id="Aaron">
+    <h1>Aaron  Riley <a href="https://twitter.com/ariley527" target="_blank" rel="noopener">(@ariley527</a>)</h1>
+  <p><em>IoT and The Bot Wars to Come</em></p>
+  <p><img data-attachment-id="188" data-permalink="https://www.bsidescha.com/schedule/aaronriley/" data-orig-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?fit=400%2C400&amp;ssl=1" data-orig-size="400,400" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Aaron Riley" data-image-description="" data-medium-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?fit=300%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?fit=400%2C400&amp;ssl=1" class="alignnone wp-image-188" src="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?resize=100%2C100" alt="" width="100" height="100" srcset="https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?resize=90%2C90&amp;ssl=1 90w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?resize=50%2C50&amp;ssl=1 50w, https://i0.wp.com/www.bsidescha.com/wp-content/uploads/2017/06/AaronRiley.jpeg?w=400&amp;ssl=1 400w" sizes="(max-width: 100px) 100vw, 100px" data-recalc-dims="1" /></p>
+  <p><span style="font-size: 10pt;">In this presentation we will look at what IoT is and how these devices can be used for malicious intent. We will talk about how the IoT devices form together to make botnets and how they are controlled. We will discuss the current botnet wars and how researchers see the future of this technology. Understanding the IoT threat landscape is imperative to being able to fight against it. We will show you tips on how to secure your IoT devices and not get caught up in a botnet.</span></p>
+  <p>&nbsp;</p>
+  </div>
+
+</main>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+</body>
+</html>
